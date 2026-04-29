@@ -1,0 +1,110 @@
+[
+  {
+    "id": "prod_1",
+    "name": "OnFitness Whey Protein",
+    "price": 899.00,
+    "originalPrice": 1200.00,
+    "rating": 5.0,
+    "image": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?q=80&w=2070",
+    "gallery": [
+      "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?q=80&w=2070"
+    ],
+    "description": "Proteína de suero de leche de alta calidad, perfecta para recuperación muscular. Cero carbohidratos, sabor extremo a chocolate intenso."
+  },
+  {
+    "id": "prod_2",
+    "name": "GymOn Dark Pre-Workout",
+    "price": 549.00,
+    "originalPrice": null,
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1594882645126-14020914d58d?q=80&w=2085",
+    "gallery": [
+      "https://images.unsplash.com/photo-1594882645126-14020914d58d?q=80&w=2085"
+    ],
+    "description": "Explosión de energía pura. Fórmula concentrada para entrenamientos intensos. Advertencia: No consumir 4 horas antes de dormir."
+  },
+  {
+    "id": "prod_3",
+    "name": "Pro Lifting Belt",
+    "price": 699.00,
+    "originalPrice": 850.00,
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=2070",
+    "gallery": [
+      "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=2070"
+    ],
+    "description": "Cinturón de levantamiento de cuero genuino reforzado. Diseñado para soporte lumbar extremo en deadlifts y sentadillas."
+  },
+  {
+    "id": "prod_4",
+    "name": "OnFitness Shaker Premium",
+    "price": 199.00,
+    "originalPrice": 250.00,
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1614113489855-66422ad300a4?q=80&w=1000",
+    "gallery": [
+      "https://images.unsplash.com/photo-1614113489855-66422ad300a4?q=80&w=1000"
+    ],
+    "description": "Shaker premium anti-fugas color negro mate. Compartimento inferior para polvo extra y rejilla mezcladora."
+  },
+  {
+    "id": "prod_5",
+    "name": "Mancuernas Ajustables (Par)",
+    "price": 1499.00,
+    "originalPrice": 1800.00,
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1586401100295-7a8096fd231a?q=80&w=1000",
+    "gallery": [
+      "https://images.unsplash.com/photo-1586401100295-7a8096fd231a?q=80&w=1000"
+    ],
+    "description": "Sistema de pesas ajustables rápido. Cambia de 2kg a 24kg con un solo giro. Ideal para entrenamiento en casa."
+  },
+  {
+    "id": "prod_6",
+    "name": "Gym Bag 'Dark Edition'",
+    "price": 850.00,
+    "originalPrice": null,
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000",
+    "gallery": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000"
+    ],
+    "description": "Maleta deportiva ultra resistente. Cuenta con compartimento especial ventilado para tenis y múltiples bolsillos impermeables."
+  },
+  {
+    "id": "prod_7",
+    "name": "Playera OnFitness 'Oversized'",
+    "price": 450.00,
+    "originalPrice": 599.00,
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=1000",
+    "gallery": [
+      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=1000"
+    ],
+    "description": "Camiseta de entrenamiento 100% algodón orgánico, corte oversized para máxima libertad de movimiento. Logo reflectante."
+  },
+  {
+    "id": "prod_8",
+    "name": "BCAA Recovery Plus",
+    "price": 699.00,
+    "originalPrice": null,
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1579722820308-d74e571900a9?q=80&w=1000",
+    "gallery": [
+      "https://images.unsplash.com/photo-1579722820308-d74e571900a9?q=80&w=1000"
+    ],
+    "description": "Aminoácidos ramificados esenciales. Acelera tu recuperación, reduce la fatiga muscular y rehidrata tu cuerpo durante el entreno."
+  },
+  {
+    "id": "prod_9",
+    "name": "Kettlebell Pro (16kg)",
+    "price": 1250.00,
+    "originalPrice": 1400.00,
+    "rating": 5.0,
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=1000",
+    "gallery": [
+      "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=1000"
+    ],
+    "description": "Pesa rusa de hierro fundido con recubrimiento de vinilo negro. Agarre texturizado para swings seguros y arranque perfecto."
+  }
+]

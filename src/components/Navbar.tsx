@@ -1,0 +1,65 @@
+"use client";
+
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { useCart } from "@/components/CartProvider";
+
+export function Navbar() {
+  const [theme, setTheme] = useState("dark");
+  const { toggleCart, items } = useCart();
+  const cartCount = items.reduce((sum, item) => sum + item.quantity, 0);
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  return (
+    <nav className="nav" style={{ height: '72px', borderBottom: '1px solid var(--border)' }}>
+      <div className="nav__inner" style={{ maxWidth: '1200px', width: '100%', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Link href="/" className="logo-brand" style={{ fontSize: '32px' }}>
+          ON<span>FITNESS</span>
+        </Link>
+        
+        <div style={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
+          <ul className="nav__links" style={{ display: 'flex', gap: '25px', listStyle: 'none' }}>
+            <li><Link href="/#sucursales" className="nav__link" style={{ fontSize: '13px', fontWeight: 600 }}>Sucursales</Link></li>
+            <li><Link href="/#planes" className="nav__link" style={{ fontSize: '13px', fontWeight: 600 }}>Planes</Link></li>
+            <li><Link href="/tienda" className="nav__link" style={{ fontSize: '13px', fontWeight: 600, color: 'var(--brand)' }}>Tienda</Link></li>
+          </ul>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', paddingLeft: '20px', borderLeft: '1px solid rgba(255,255,255,0.1)' }}>
+            <div 
+              onClick={toggleTheme}
+              className="theme-toggle"
+              title={theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+            >
+              <div className="theme-toggle__dot">
+                {theme === "dark" ? (
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                ) : (
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                )}
+              </div>
+            </div>
+
+            <button onClick={toggleCart} style={{ position: 'relative', background: 'transparent', border: 'none', color: 'white', cursor: 'pointer', padding: '5px' }}>
+              <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+              {cartCount > 0 && (
+                <span style={{ position: 'absolute', top: '-5px', right: '-5px', background: 'var(--brand)', color: 'white', fontSize: '10px', fontWeight: 'bold', width: '18px', height: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%' }}>
+                  {cartCount}
+                </span>
+              )}
+            </button>
+            <Link href="/inscripcion" className="btn btn--primary" style={{ padding: '8px 20px', fontSize: '14px' }}>
+              Inscríbete
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
