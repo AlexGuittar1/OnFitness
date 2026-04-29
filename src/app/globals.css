@@ -486,3 +486,96 @@ h1, h2, h3, h4, h5, h6 {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* =============================================
+   RESPONSIVE DESIGN (Mobile & Tablet)
+   ============================================= */
+
+@media (max-width: 1024px) {
+  .hero__title {
+    font-size: 80px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 60px !important;
+  }
+  
+  .hero__subtitle {
+    font-size: 16px !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    width: 100%; /* Botones de bloque completo en móvil */
+    margin-bottom: 10px;
+  }
+  
+  /* Arreglo para botones agrupados en Hero */
+  .hero__content > div {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+  
+  /* Navbar adjustments */
+  .nav {
+    padding: 10px 0;
+  }
+  
+  .nav__inner {
+    padding: 0 15px;
+    flex-wrap: wrap;
+  }
+  
+  .logo-brand {
+    font-size: 24px !important;
+  }
+  
+  .nav__links {
+    display: none !important; /* Ocultar links en móviles pequeños para el MVP, o hacer menú hamburguesa */
+  }
+  
+  /* Grids que usan inline styles */
+  .responsive-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .summary-card {
+    position: static;
+    top: auto;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+  
+  .footer-grid > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center !important;
+  }
+  
+  .footer-grid ul {
+    align-items: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}

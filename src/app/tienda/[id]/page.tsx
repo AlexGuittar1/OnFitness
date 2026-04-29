@@ -38,7 +38,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
           ← Volver a la tienda
         </Link>
         
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'start' }}>
+        <div className="responsive-grid-2" style={{ display: 'grid', gap: '60px', alignItems: 'start' }}>
           {/* Left: Product Gallery */}
           <div className="reveal-target">
             <div style={{ background: 'var(--bg-card)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid var(--border)', marginBottom: '20px' }}>

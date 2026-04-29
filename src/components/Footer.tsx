@@ -25,7 +25,7 @@ export function Footer() {
   return (
     <footer className="footer" style={{ background: '#050505', paddingTop: '100px', position: 'relative' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '40px', marginBottom: '80px' }}>
+        <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '40px', marginBottom: '80px' }}>
           
           {/* Columna 1: About */}
           <div>

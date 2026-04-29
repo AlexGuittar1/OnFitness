@@ -106,7 +106,7 @@ function RegistrationForm() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+              <div className="responsive-grid-2" style={{ display: 'grid', gap: '20px' }}>
                 <div className="input-group">
                   <label>Email personal</label>
                   <div className="input-wrapper">
@@ -123,7 +123,7 @@ function RegistrationForm() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+              <div className="responsive-grid-2" style={{ display: 'grid', gap: '20px' }}>
                 <div className="input-group">
                   <label>Sexo</label>
                   <div className="input-wrapper">
