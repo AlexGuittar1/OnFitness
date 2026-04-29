@@ -579,3 +579,28 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
   }
 }
+
+/* Navbar Display Helpers */
+.mobile-menu-btn {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+  
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+  
+  /* Ajustar logo en móvil para que quepa con el botón hamburguesa */
+  .logo-brand {
+    font-size: 28px !important;
+  }
+  
+  /* Reset earlier hide for all nav__links to avoid conflicts */
+  .nav__links {
+    /* Mantenemos display:none desde el media query anterior que afecta a .nav__links genéricamente */
+  }
+}
