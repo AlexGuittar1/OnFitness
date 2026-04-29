@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams, useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 
 const BRANCH_MAP: Record<string, string> = {
@@ -15,7 +15,7 @@ const PLAN_MAP: Record<string, any> = {
   "estudiante": { name: "Plan Estudiante", price: 349, description: "Especial para alumnos" }
 };
 
-export default function RegistrationPage() {
+function RegistrationForm() {
   const searchParams = useSearchParams();
   const router = useRouter();
   
@@ -28,7 +28,6 @@ export default function RegistrationPage() {
   const branchName = BRANCH_MAP[sucursalId] || "Sucursal seleccionada";
   const plan = PLAN_MAP[planId] || PLAN_MAP["mensual"];
   
-  // Calculate total: if plan is anual, multiply by 12.
   const isAnual = planId === "anual";
   const totalHoy = isAnual ? plan.price * 12 : plan.price;
 
@@ -36,7 +35,6 @@ export default function RegistrationPage() {
     e.preventDefault();
     setStep('processing');
     
-    // Simulate payment sequence
     setTimeout(() => setLoadingText("Conectando con procesador de pagos..."), 1000);
     setTimeout(() => setLoadingText("Autorizando transacción..."), 2000);
     setTimeout(() => setStep('success'), 3500);
@@ -95,7 +93,6 @@ export default function RegistrationPage() {
     <div style={{ paddingTop: '120px', paddingBottom: '100px', minHeight: '100vh', background: 'var(--bg-secondary)' }}>
       <div className="container">
         <div className="form-grid">
-          {/* Left: Modern Form */}
           <div>
             <h1 style={{ fontSize: '48px', marginBottom: '10px' }}>DATOS PERSONALES</h1>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '40px' }}>Crea tu perfil de atleta para activar tu membresía.</p>
@@ -169,7 +166,6 @@ export default function RegistrationPage() {
             </form>
           </div>
 
-          {/* Right: Order Summary */}
           <div className="summary-card">
             <h2 style={{ fontSize: '24px', marginBottom: '25px' }}>RESUMEN DE COMPRA</h2>
             
@@ -220,5 +216,24 @@ export default function RegistrationPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function RegistrationPage() {
+  return (
+    <Suspense fallback={
+      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--bg-primary)' }}>
+        <div style={{ textAlign: 'center' }}>
+          <div className="loader" style={{ 
+            width: '60px', height: '60px', border: '4px solid var(--border)', 
+            borderTop: '4px solid var(--brand)', borderRadius: '50%', 
+            margin: '0 auto 30px', animation: 'spin 1s linear infinite' 
+          }}></div>
+          <h2 style={{ fontSize: '24px', color: 'white' }}>Cargando formulario...</h2>
+        </div>
+      </div>
+    }>
+      <RegistrationForm />
+    </Suspense>
   );
 }
